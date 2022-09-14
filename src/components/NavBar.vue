@@ -12,7 +12,7 @@
       <div class="menu">
         <a href="#" class="menu-item">Departments</a>
         <a href="#" class="menu-item">Settings</a>
-        <a href="#" class="menu-item">Logout</a>
+        <a href="#" class="menu-login">Logout</a>
       </div>
     </div>
   </nav>
@@ -39,7 +39,7 @@
         }
 
         &-login {
-          @apply rounded-md bg-red-500 px-4 py-2 text-red-100 hover:bg-red-700;
+          @apply rounded-md bg-red-500 px-4 py-2 text-black hover:bg-red-700;
         }
       }
     }
