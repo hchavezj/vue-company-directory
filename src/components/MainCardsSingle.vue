@@ -21,10 +21,10 @@
 
 <style scoped lang="postcss">
   .card {
-    @apply cursor-pointer overflow-hidden rounded-2xl bg-slate-100 p-8 shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:shadow-slate-900;
+    @apply cursor-pointer overflow-hidden rounded-2xl border bg-slate-100 p-8 shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:shadow-slate-900;
     &-image {
       img {
-        @apply mx-auto rounded-2xl object-contain shadow-sm;
+        @apply mx-auto rounded-2xl object-contain;
       }
     }
     &-details {
@@ -36,7 +36,7 @@
         @apply -mt-4 text-xs text-yellow-700;
       }
       &-email {
-        @apply text-slate-700;
+        @apply font-semibold text-slate-700;
       }
       &-quote {
         @apply mt-4 font-semibold italic text-slate-500;

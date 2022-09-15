@@ -1,6 +1,6 @@
 <script setup>
   import { ref } from 'vue'
-  const brand = ref('🏛️ Fake Cmpany Directory')
+  const brand = ref('🥡 The Fake Box Company Directory')
 </script>
 
 <template>
@@ -10,8 +10,8 @@
         <span class="brand-title">{{ brand }}</span>
       </div>
       <div class="menu">
-        <a href="#" class="menu-item">Departments</a>
-        <a href="#" class="menu-item">Settings</a>
+        <a href="#" class="menu-item">Main</a>
+        <a href="#" class="menu-item">About Us</a>
         <a href="#" class="menu-login">Logout</a>
       </div>
     </div>
@@ -27,7 +27,7 @@
 
       .brand {
         &-title {
-          @apply text-2xl font-bold text-emerald-300;
+          @apply border p-2 text-2xl font-bold text-white;
         }
       }
 
