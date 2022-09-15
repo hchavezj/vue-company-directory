@@ -24,13 +24,13 @@
     @apply cursor-pointer overflow-hidden rounded-2xl bg-slate-100 p-8 shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:shadow-slate-900;
     &-image {
       img {
-        @apply mx-auto rounded-full object-contain;
+        @apply mx-auto rounded-2xl object-contain shadow-sm;
       }
     }
     &-details {
       @apply flex flex-col gap-4 pt-6 text-center;
       &-name {
-        @apply text-3xl font-semibold tracking-wide text-slate-800 underline;
+        @apply -mt-4 text-3xl font-semibold tracking-wide text-slate-800 underline;
       }
       &-job {
         @apply -mt-4 text-xs text-yellow-700;
@@ -39,7 +39,7 @@
         @apply text-slate-700;
       }
       &-quote {
-        @apply font-semibold italic text-slate-500;
+        @apply mt-4 font-semibold italic text-slate-500;
       }
     }
   }
