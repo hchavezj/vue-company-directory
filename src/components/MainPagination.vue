@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/script-indent -->
 <script setup>
   import { ref } from 'vue'
   const pages = ref(10)

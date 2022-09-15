@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <script setup>
   import MainSearch from './MainSearch.vue'
   import MainCards from './MainCards.vue'
