@@ -19,7 +19,13 @@
 <template>
   <div class="pagination">
     <button class="action" :disabled="activePage === 1" @click="prevPage">Prev</button>
-    <button v-for="page in pages" class="page" :class="page === activePage ? 'active' : ''" @click="activePage = page">
+    <button
+      v-for="page in pages"
+      :key="page"
+      class="page"
+      :class="page === activePage ? 'active' : ''"
+      @click="activePage = page"
+    >
       {{ page }}
     </button>
     <button class="action" :disabled="activePage === pages" @click="nextPage">Next</button>
@@ -31,14 +37,14 @@
     @apply flex justify-center gap-4;
 
     .action {
-      @apply bg-slate-100 p-2 font-medium text-slate-700 shadow-md hover:rounded-md disabled:text-slate-400 hover:disabled:bg-slate-100;
+      @apply rounded-md bg-slate-100 p-2 font-medium text-slate-700 shadow-md hover:rounded-md disabled:text-slate-400 hover:disabled:bg-slate-100;
     }
 
     .page {
-      @apply bg-slate-200 p-2 font-medium text-slate-700 shadow-md hover:rounded-md;
+      @apply rounded-md bg-slate-200 p-2 font-medium text-slate-700 shadow-md hover:rounded-md;
 
       &.active {
-        @apply text-slate-100 hover:bg-emerald-700;
+        @apply border border-gray-400 text-slate-400 hover:bg-emerald-700;
       }
     }
   }

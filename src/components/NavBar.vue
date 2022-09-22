@@ -1,13 +1,13 @@
 <script setup>
-import { ref } from 'vue'
-const brand = ref('🥡 The Fake Box Company Directory')
+  import { ref } from 'vue'
+  const brand = ref('🥡 The Fake Box Company Directory')
 </script>
 
 <template>
   <nav>
     <div class="wrapper">
       <div class="brand">
-        <span class="brand-title">{{  brand  }}</span>
+        <span class="brand-title">{{ brand }}</span>
       </div>
       <div class="menu">
         <a href="#" class="menu-item">Main</a>
@@ -19,29 +19,29 @@ const brand = ref('🥡 The Fake Box Company Directory')
 </template>
 
 <style scoped lang="postcss">
-nav {
-  @apply flex h-20 bg-gray-800 text-gray-200;
+  nav {
+    @apply flex h-20 bg-gray-800 text-gray-200;
 
-  .wrapper {
-    @apply container mx-auto flex w-full items-center justify-between;
+    .wrapper {
+      @apply container mx-auto flex w-full items-center justify-between;
 
-    .brand {
-      &-title {
-        @apply border p-2 text-2xl font-bold text-white;
-      }
-    }
-
-    .menu {
-      @apply flex gap-2;
-
-      &-item {
-        @apply rounded-md px-4 py-2 hover:bg-emerald-500 hover:text-slate-900;
+      .brand {
+        &-title {
+          @apply border p-2 text-2xl font-bold text-white;
+        }
       }
 
-      &-login {
-        @apply rounded-md bg-red-500 px-4 py-2 text-black hover:bg-red-700;
+      .menu {
+        @apply flex gap-2;
+
+        &-item {
+          @apply rounded-md px-4 py-2 hover:bg-emerald-500 hover:text-slate-900;
+        }
+
+        &-login {
+          @apply rounded-md bg-red-500 px-4 py-2 text-black hover:bg-red-700;
+        }
       }
     }
   }
-}
 </style>
