@@ -41,7 +41,7 @@
     }
 
     .page {
-      @apply rounded-md bg-slate-200 p-2 font-medium text-slate-700 shadow-md hover:rounded-md;
+      @apply rounded-md bg-slate-200 p-2 font-medium text-slate-700 shadow-md hover:rounded-md hover:bg-emerald-700;
 
       &.active {
         @apply border border-gray-400 text-slate-400 hover:bg-emerald-700;
