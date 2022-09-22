@@ -14,9 +14,9 @@
   const logUserIn = () => {
     if (login(username.value, password.value)) {
       if (route.query.redirect) {
-        route.push(route.query.redirect)
+        router.push(route.query.redirect)
       } else {
-        route.push({ name: 'Home' })
+        router.push({ name: 'Home' })
       }
     } else {
       logout()
