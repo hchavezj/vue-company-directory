@@ -29,13 +29,16 @@
 <style lang="postcss" scoped>
   .pagination {
     @apply flex justify-center gap-4;
+
     .action {
-      @apply rounded-md bg-slate-100 p-2 font-medium text-slate-700 shadow-md hover:bg-slate-200 disabled:text-slate-400 hover:disabled:bg-slate-100;
+      @apply bg-slate-100 p-2 font-medium text-slate-700 shadow-md hover:rounded-md disabled:text-slate-400 hover:disabled:bg-slate-100;
     }
+
     .page {
-      @apply rounded-md bg-slate-100 p-2 font-medium text-slate-700 shadow-md hover:bg-slate-200;
+      @apply bg-slate-200 p-2 font-medium text-slate-700 shadow-md hover:rounded-md;
+
       &.active {
-        @apply bg-emerald-700 text-slate-100 hover:bg-emerald-600;
+        @apply text-slate-100 hover:bg-emerald-700;
       }
     }
   }

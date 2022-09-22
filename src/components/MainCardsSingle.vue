@@ -22,22 +22,28 @@
 <style scoped lang="postcss">
   .card {
     @apply cursor-pointer overflow-hidden rounded-2xl border bg-slate-100 p-8 shadow-md transition-transform duration-300 hover:scale-110 hover:shadow-xl hover:shadow-slate-900;
+
     &-image {
       img {
         @apply mx-auto rounded-2xl object-contain;
       }
     }
+
     &-details {
       @apply flex flex-col gap-4 pt-6 text-center;
+
       &-name {
         @apply -mt-4 text-3xl font-semibold tracking-wide text-slate-800 underline;
       }
+
       &-job {
         @apply -mt-4 text-xs text-yellow-700;
       }
+
       &-email {
         @apply font-semibold text-slate-700;
       }
+
       &-quote {
         @apply mt-4 font-semibold italic text-slate-500;
       }
