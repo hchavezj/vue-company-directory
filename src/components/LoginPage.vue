@@ -1,27 +1,27 @@
 <script setup>
-import { ref } from 'vue'
-import { useRouter, useRoute } from 'vue-router'
+  import { ref } from 'vue'
+  import { useRouter, useRoute } from 'vue-router'
 
-import { useAuth } from '@/composables/useAuth'
-const { login, logout } = useAuth()
+  import { useAuth } from '@/composables/useAuth'
+  const { login, logout } = useAuth()
 
-const router = useRouter()
-const route = useRoute()
+  const router = useRouter()
+  const route = useRoute()
 
-const username = ref('')
-const password = ref('')
+  const username = ref('')
+  const password = ref('')
 
-const logUserIn = async () => {
-  if (await login(username.value, password.value)) {
-    if (route.query.redirect) {
-      router.push(route.query.redirect)
+  const logUserIn = async () => {
+    if (await login(username.value, password.value)) {
+      if (route.query.redirect) {
+        router.push(route.query.redirect)
+      } else {
+        router.push({ name: 'Home' })
+      }
     } else {
-      router.push({ name: 'Home' })
+      logout()
     }
-  } else {
-    logout()
   }
-}
 </script>
 
 <template>
@@ -33,11 +33,11 @@ const logUserIn = async () => {
 </template>
 
 <style lang="postcss" scopted>
-.login-form {
-  @apply mx-auto mt-80 flex max-w-lg flex-col gap-4 rounded-md p-8 shadow-lg;
+  .login-form {
+    @apply mx-auto mt-80 flex max-w-lg flex-col gap-4 rounded-md p-8 shadow-lg;
 
-  & input {
-    @apply rounded-md px-4 py-2 text-xl ring-1 ring-slate-300;
+    & input {
+      @apply rounded-md px-4 py-2 text-xl ring-1 ring-slate-300;
+    }
   }
-}
 </style>
