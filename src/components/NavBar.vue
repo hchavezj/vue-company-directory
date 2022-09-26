@@ -18,7 +18,7 @@
           👤
           <RouterLink :to="{ name: 'Settings' }">
             <span class="hover:underline">
-              <strong>[{{ user.name }}]</strong>
+              <strong>[{{ user?.email }}]</strong>
             </span>
           </RouterLink>
         </p>
@@ -49,6 +49,7 @@
 
       .menu {
         @apply flex gap-2;
+
         div {
           @apply py-2;
         }
