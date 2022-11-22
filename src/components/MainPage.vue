@@ -1,4 +1,6 @@
 <script setup>
+  import { onMounted } from 'vue';
+
   import MainSearch from '@/components/MainSearch.vue'
   import MainCards from '@/components/MainCards.vue'
   import MainPagination from '@/components/MainPagination.vue'
